@@ -17,7 +17,7 @@ docker run -v $PWD/apt-mirror:/usr/local/apache2/htdocs -p80:80 httpd:2.4.29-alp
 ```sh
 mkdir cron.d
 
-echo "0 3 * * * apt-mirror /usr/bin/apt-mirror > /var/spool/apt-mirror/cron.log" > cron.d/apt-mirror
+echo "0 3 * * * root /usr/bin/apt-mirror > /var/spool/apt-mirror/cron.log" > cron.d/apt-mirror
 chown root:root cron.d/apt-mirror
 chmod 644 cron.d/apt-mirror
 

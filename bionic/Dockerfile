@@ -1,4 +1,4 @@
-FROM ubuntu:bionic-20180125
+FROM ubuntu:bionic-20180410
 
 RUN apt update && \
     apt install -y cron apt-mirror && \
